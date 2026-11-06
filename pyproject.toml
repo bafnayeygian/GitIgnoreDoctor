@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitignoredoctor"
+version = "1.0.0"
+description = "Audit repository ignore rules against generated, secret, cache, build, and IDE artifacts that commonly leak into commits."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "GitIgnoreDoctor contributors"}]
+
+[project.scripts]
+gitignore-doctor = "gitignore_doctor.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bafnayeygian/GitIgnoreDoctor"
+Issues = "https://github.com/bafnayeygian/GitIgnoreDoctor/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
